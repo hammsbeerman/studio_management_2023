@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+{% block content %}
+
+{{ submitted }}
+{{ message }}
+
+{% if messages %}
+        <ul class="messages">
+               {% for message in messages %}
+                     <li>{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+               {% endfor %}
+       </ul>
+{% endif %}
+
+<div class="row">
+    <div class="col-sm-9">
+        <div class="MyForm">
+            <form method='POST' action=''>
+                {% csrf_token %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.jobnumber|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.jobquote|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.company|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.customer|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.description|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.set_per_book|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.pages_per_book|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.qty_of_sheets|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.original_size|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.press_size|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.press_size_per_parent|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.flat_size|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.finished_size|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.gangup|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.overage|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.output_per_sheet|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.parent_sheets_required|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.side_1_clicks|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.side_2_clicks|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.paper_stock|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.price_per_m|as_crispy_field }}
+                            </div>
+                        </div>
+                        <p>
+                            <button id='more-line' type="button" class="btn btn-primary">Show / Hide Paper Stock</button>
+                        <p>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <!-- <input type="submit" value='Save'/> -->
+                    </div>
+                </div>
+            </div>    
+            </form>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+        <div class="recent">
+            <span class="">Recent invoices</span>
+            <span class="">{{total_invoices}}</span>
+            <br><br>
+            {% for instance in queryset %}
+                <div>
+                <div class="">{{instance.jobnumber}}</div>
+                <div class="">{{instance.company}}</div>
+                </div>
+                <div class="">${{instance.customer}}</div><br>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -7,3 +7,6 @@ django-htmx
 django-mptt
 django-forms-dynamic
 django-widget-tweaks
+django-crispy-forms
+crispy-bootstrap5
+django-formtools

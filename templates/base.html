@@ -4,6 +4,9 @@
 {% block scripts %}
 {% endblock %}
   <head>
+
+    <link href="{% static 'css/stylesheet.css' %}" rel="stylesheet">
+
     <script src="https://unpkg.com/htmx.org@1.7.0"></script>
         <style>
             .htmx-indicator{
@@ -39,6 +42,8 @@
   </head>
   <body>
     {% include 'navbar.html' %}
+    <br>
+    {% include 'navbarnew.html' %}
     <br></br>
     <div class="shadow p-4 mb-5 bg-body rounded">
     <div class="container">

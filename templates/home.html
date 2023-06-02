@@ -1,7 +1,73 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Hello World!</h1> 
+
+<table style="width:100%">
+    <tr>
+        <th>Customers</th>
+        <th>Vendors</th>
+        <th>Inventory</th>
+        <th>Admin</th>
+        <th>Workorders</th>
+        <th>Quoting</th>
+        <th>User Management</th>
+        <th>Scratch Area</th>
+    </tr>
+    <tr>
+        <td><a class="nav-link" href="{% url 'customers:list' %}" target="_blank">Customer List</a></td>
+        <td><a class="nav-link" href="{% url 'vendors:list' %}" target="_blank">Vendor List</a></td>
+        <td><a class="nav-link" href="" target="_blank">Inventory List #</a></td>
+        <td><a class="nav-link" href="{% url 'inventory:category-list' %}" target="_blank">Inventory Category List</a></td>
+        <td><a class="nav-link" href="{% url 'workorders:createbase' %}" target="_blank">Add Workorder</a></td>
+        <td><a class="nav-link" href="{% url 'quotes:krueger-print' %}" target="_blank">Krueger Printing</a></td>
+        <td><a class="nav-link" href="{% url 'register' %}" target="_blank">Register</a></td>
+        <td><a class="nav-link" href="{% url 'scratch:dynamic' %}" target="_blank">Dynamic Customer</a></td>
+    </tr>
+    <tr>
+        <td><a class="nav-link" href="{% url 'customers:create' %}" target="_blank">Add Customer</a></td>
+        <td><a class="nav-link" href="{% url 'vendors:create' %}" target="_blank">Add Vendor</a></td>
+        <td><a class="nav-link" href="{% url 'purchase_orders:create-po' %}" target="_blank">Add Purchase Order</a></td>
+        <td><a class="nav-link" href="" target="_blank">Add / Update Inventory Category #</a></td>
+        <td><a class="nav-link" href="{% url 'workorders:list' %}" target="_blank">Workorder List</a></td>
+        <td></td>
+        <td><a class="nav-link" href="{% url 'login' %}" target="_blank">Login</a></td>
+        <td><a class="nav-link" href="{% url 'scratch:create' %}" target="_blank">Add Workorder</a></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td><a class="nav-link" href="{% url 'purchase_orders:po-list' %}" target="_blank">Purchase Order List</a></td>
+        <td><a class="nav-link" href="{% url 'inventory:mpn-list' %}" target="_blank">Master Part Number List</a></td>
+        <td></td>
+        <td></td>
+        <td><a class="nav-link" href="{% url 'logout' %}" target="_blank">Logout</a></td>
+        <td><a class="nav-link" href="{% url 'scratch:custom' %}" target="_blank">Custom Form</a></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="nav-link" href="{% url 'inventory:create-mpn' %}" target="_blank">Add Master Part Number</a></td>
+        <td></td>
+        <td></td>
+        <td><a class="nav-link" href="/admin" target="_blank">Admin</a></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="nav-link" href="" target="_blank">Timecard #</a></td>
+        <td></td>
+    </tr>
+
+</table>
+
+<hr>
+
 
 
 

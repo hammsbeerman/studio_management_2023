@@ -46,6 +46,9 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'formtools',
     'customers',
     'inventory',
     'purchase_orders',
@@ -53,9 +56,14 @@ LOCAL_APPS = [
     'vendors',
     'workorders',
     'scratch',
+    'quotes',
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + LOCAL_APPS + THIRD_PARTY_APPS
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -137,6 +145,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    BASE_DIR / "templates/static",
+]
+
+STATIC_ROOT = STATIC_ROOT = BASE_DIR / "staticfiles"
+
+
 #STATICFILES_DIRS = (
 #os.path.join(BASE_DIR, 'staticfiles')
 #)
