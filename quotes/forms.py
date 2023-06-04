@@ -20,27 +20,27 @@ class KruegerJobDetailForm(forms.ModelForm):
             'parent_sheets_required': forms.TextInput(attrs={'readonly':'readonly'}),
         }
 
-    def clean_jobnumber(self):
+    """def clean_jobnumber(self):
         jobnumber = self.cleaned_data.get('jobnumber')
         if not jobnumber:
             raise forms.ValidationError('This field is required')
-        return jobnumber
+        return jobnumber"""
 
 
-    def clean_company(self):
-        company = self.cleaned_data.get('company')
-        if not company:
+    def clean_customer(self):
+        customer = self.cleaned_data.get('customer')
+        if not customer:
             raise forms.ValidationError('This field is required')
-        return company
+        return customer
     
-    """def clean_description(self):
+    def clean_description(self):
         description = self.cleaned_data.get('description')
         if not description:
             raise forms.ValidationError('This field is required')
-        return description"""
+        return description
     
-    def clean_qty(self):
+    """def clean_qty(self):
         qty = self.cleaned_data.get('qty')
         if not qty:
             raise forms.ValidationError('This field is required')
-        return qty
+        return qty"""

@@ -10,11 +10,11 @@ class KruegerJobDetail(models.Model):
         LK = "LK"
         KRUEGER = "KRUEGER"
 
-    jobnumber = models.CharField('Job Number', max_length=100, blank=False, null=False)
+    jobnumber = models.CharField('Job Number', max_length=100, blank=True, null=True)
     jobquote = models.CharField('Workorder or Quote', max_length=100, choices=JobQuote.choices, blank=False, null=False)
     company = models.CharField('Company', max_length=100, choices=Company.choices, blank=False, null=False)
-    customer = models.ForeignKey(Customer, blank=True, null=True, on_delete=models.CASCADE)
-    description = models.CharField('Job Description', max_length=100, blank=True, null=True)
+    customer = models.ForeignKey(Customer, blank=False, null=False, on_delete=models.CASCADE)
+    description = models.CharField('Job Description', max_length=100, blank=False, null=False)
     set_per_book = models.PositiveIntegerField('Sets per Book', blank=True, null=True)
     pages_per_book = models.PositiveBigIntegerField('Pages per Book', blank=True, null=True)
     qty_of_sheets = models.CharField('Qty of Sheets', max_length=10, blank=True, null=True)
