@@ -26,6 +26,11 @@ class KruegerJobDetailForm(forms.ModelForm):
             'output_per_sheet': forms.TextInput(attrs={'readonly':'readonly'}),
             'qty_of_sheets': forms.TextInput(attrs={'readonly':'readonly'}),
             'parent_sheets_required': forms.TextInput(attrs={'readonly':'readonly'}),
+            'side_1_clicks': forms.TextInput(attrs={'readonly':'readonly'}),
+            'side_2_clicks': forms.TextInput(attrs={'readonly':'readonly'}),
+            'step_print_cost_side_1_price': forms.TextInput(attrs={'readonly':'readonly'}),
+            'step_print_cost_side_2_price': forms.TextInput(attrs={'readonly':'readonly'}),
+            'step_print_mailmerge_price': forms.TextInput(attrs={'readonly':'readonly'}),
         }
 
     """def clean_jobnumber(self):
