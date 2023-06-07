@@ -11,13 +11,7 @@
 {{ submitted }}
 {{ message }}
 
-{% if messages %}
-        <ul class="messages">
-               {% for message in messages %}
-                     <li>{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-               {% endfor %}
-       </ul>
-{% endif %}
+
 
 <div class="row">
     <div class="col-sm-9">
@@ -102,6 +96,206 @@
                                 {{ form.price_per_m|as_crispy_field }}
                             </div>
                         </div>
+                        <hr>
+                        Test area
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.step_workorder_price|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_reclaim_artwork_price|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_send_to_press_price|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_send_mailmerge_to_press_price|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.mailmerge_qty|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.mailmerge_price_per_piece|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_print_mailmerge_price|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.material_cost|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.material_markup_percentage|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.material_markup|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class='col'>
+                                {{ form.step_wear_and_tear_price|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.step_print_cost_side_1|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_print_cost_side_1_price|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.step_print_cost_side_2|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_print_cost_side_2_price|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class='col'>
+                                {{ form.step_trim_to_size_price|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.step_NCR_compound_price|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_white_compound_price|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.step_set_to_perf_price|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.perf_price_per_piece|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.perf_number_of_pieces|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_perf_price|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.step_set_to_number_price|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.number_price_to_number|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.number_number_of_pieces|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_number_price|as_crispy_field }}
+                            </div>  
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.step_insert_frontback_cover_price|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_insert_wrap_around_price|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_insert_chip_divider_price|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.step_set_to_drill_price|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_set_to_drill_price|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_set_to_drill_price|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_set_to_drill_price|as_crispy_field }}
+                            </div>  
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.step_set_to_staple_price|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.staple_price_per_staple|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.staple_staples_per_piece|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.staple_number_of_pieces|as_crispy_field }}
+                            </div>  
+                            <div class='col'>
+                                {{ form.step_staple_price|as_crispy_field }}
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.step_set_folder_price|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.fold_price_per_fold|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.fold_number_to_fold|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_fold_price|as_crispy_field }}
+                            </div>   
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.tabs_price_per_tab|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.tabs_per_piece|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.tabs_number_of_pieces|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_tab_price|as_crispy_field }}
+                            </div>  
+                        </div>
+                        <div class="col-sm-4">
+                            <div class='col'>
+                                {{ form.step_bulk_mail_tray_sort_paperwork_price|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.step_id_count_price|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_count_package_price|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_delivery_price|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_packing_slip_price|as_crispy_field }}
+                            </div>  
+                        </div>
+                        <div class="row">
+                            <div class='col'>
+                                {{ form.price_total|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.price_total_per_m|as_crispy_field }}
+                            </div> 
+                        </div>
+
+
+                        
                         <!-- <p>
                             <button id='more-line' type="button" class="btn btn-primary">Show / Hide Paper Stock</button>
                         <p> -->

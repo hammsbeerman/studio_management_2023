@@ -4,4 +4,7 @@ from django.contrib import admin
 
 from .models import KruegerJobDetail
 
-admin.site.register(KruegerJobDetail)
+class KruegerJobDetailAdmin(admin.ModelAdmin):
+    readonly_fields = ["qty_of_sheets"]
+
+admin.site.register(KruegerJobDetail, KruegerJobDetailAdmin)
