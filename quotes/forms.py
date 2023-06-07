@@ -27,19 +27,25 @@ class KruegerJobDetailForm(forms.ModelForm):
         return jobnumber"""
 
 
-    def clean_customer(self):
+    """def clean_customer(self):
         customer = self.cleaned_data.get('customer')
         if not customer:
             raise forms.ValidationError('This field is required')
-        return customer
+        return customer"""
     
-    def clean_description(self):
+    def clean_company(self):
+        company = self.cleaned_data.get('company')
+        if not company:
+            raise forms.ValidationError('This field is required')
+        return company
+    
+    """def clean_description(self):
         description = self.cleaned_data.get('description')
         if not description:
             raise forms.ValidationError('This field is required')
         return description
     
-    """def clean_qty(self):
+    def clean_qty(self):
         qty = self.cleaned_data.get('qty')
         if not qty:
             raise forms.ValidationError('This field is required')

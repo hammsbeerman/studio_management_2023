@@ -38,12 +38,7 @@ $(document).ready(function(){
   
     });
   
-    //Sample of how to show / hide field
-    $('#div_id_paper_stock').hide()
-  
-    $('#more-line').click(function(){
-    $('#div_id_paper_stock').slideToggle(200)
-    });
+    
   
     $('#id_press_size_per_parent, #id_gangup, #id_output_per_sheet').keyup(function(){
       //alert( "Handler for `keyup` called." );
@@ -56,12 +51,7 @@ $(document).ready(function(){
   
     });
   
-    #//Sample of how to show / hide field
-    #$('#div_id_paper_stock').hide()
-  
-    #$('#more-line').click(function(){
-    #$('#div_id_paper_stock').slideToggle(200)
-    #});
+
   
   
   

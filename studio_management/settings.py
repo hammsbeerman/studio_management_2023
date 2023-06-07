@@ -81,7 +81,7 @@ ROOT_URLCONF = 'studio_management.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates",],
+        'DIRS': [BASE_DIR / "template",],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -148,7 +148,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    BASE_DIR / "templates/static",
+    BASE_DIR / "template/static",
 ]
 
 STATIC_ROOT = STATIC_ROOT = BASE_DIR / "staticfiles"

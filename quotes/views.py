@@ -14,7 +14,7 @@ def newjob(request):
         #print (form)
         form.save()
         messages.success(request, 'Successfully Saved')
-        return redirect('/jobs/newjob')
+        return redirect('/quotes/kruegerprint')
     context = {
         "form": form,
         "title": "New Job",

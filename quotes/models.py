@@ -34,4 +34,4 @@ class KruegerJobDetail(models.Model):
     dateentered = models.DateTimeField(auto_now_add=True, blank=False, null=False)
 
     def __str__(self):
-        return self.jobnumber + ' ' + self.company + ' ' + self.description
+        return self.company + ' ' + self.description
