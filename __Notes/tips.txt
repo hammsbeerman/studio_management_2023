@@ -1,0 +1,16 @@
+
+#Good rundown on database basics
+https://www.youtube.com/watch?v=PD3YnPSHC-c
+
+python manage.py shell
+from quotes.models import *
+detail = KruegerJobDetail.objects.all()
+print(detail)
+print(detail.first())
+print(detail.last())
+
+#
+Select item from database (can only be used on unique items)
+item = KruegerJobDetail.get(id="2")
+print(item)
+print(item.company)

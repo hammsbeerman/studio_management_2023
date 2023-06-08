@@ -12,7 +12,6 @@
 {{ message }}
 
 
-
 <div class="row">
     <div class="col-sm-9">
         <div class="MyForm">
@@ -97,7 +96,6 @@
                             </div>
                         </div>
                         <hr>
-                        Test area
                         <div class="row">
                             <div class='col'>
                                 {{ form.step_workorder_price|as_crispy_field }}
@@ -112,17 +110,7 @@
                                 {{ form.step_send_mailmerge_to_press_price|as_crispy_field }}
                             </div>
                         </div>
-                        <div class="row">
-                            <div class='col'>
-                                {{ form.mailmerge_qty|as_crispy_field }}
-                            </div>
-                            <div class='col'>
-                                {{ form.mailmerge_price_per_piece|as_crispy_field }}
-                            </div>
-                            <div class='col'>
-                                {{ form.step_print_mailmerge_price|as_crispy_field }}
-                            </div>
-                        </div>
+                        
                         <div class="row">
                             <div class='col'>
                                 {{ form.material_cost|as_crispy_field }}
@@ -135,9 +123,6 @@
                             </div>
                         </div>
                         <div class="col-sm-4">
-                            <div class='col'>
-                                {{ form.step_wear_and_tear_price|as_crispy_field }}
-                            </div>
                         </div>
                         <div class="row">
                             <div class='col'>
@@ -155,12 +140,41 @@
                                 {{ form.step_print_cost_side_2_price|as_crispy_field }}
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="row">
                             <div class='col'>
                                 {{ form.step_trim_to_size_price|as_crispy_field }}
                             </div>
+                            <div class='col'>
+                                {{ form.step_wear_and_tear_price|as_crispy_field }}
+                            </div>
                         </div>
-                        <div class="row">
+                        <hr>
+                        Options:
+                        <br>
+                        <!--<div id="show-numbering"><u>Add Numbering</u></div> -->
+                        Mailmerge: <input type="checkbox" id="show-mailmerge">
+                        Pad: <input type="checkbox" id="show-padding">
+                        Add Perf: <input type="checkbox" id="show-perf">
+                        Add Numbering: <input type="checkbox" id="show-numbering">
+                        Wraparound: <input type="checkbox" id="show-wraparound">
+                        Set to Drill: <input type="checkbox" id="show-drill">
+                        Staple: <input type="checkbox" id="show-staple">
+                        Fold: <input type="checkbox" id="show-fold">
+                        Tab: <input type="checkbox" id="show-tab">
+                        Bulk Mail: <input type="checkbox" id="show-bulkmail">
+                        <hr>
+                        <div class="row" id="mailmerge-row">
+                            <div class='col'>
+                                {{ form.mailmerge_qty|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.mailmerge_price_per_piece|as_crispy_field }}
+                            </div>
+                            <div class='col'>
+                                {{ form.step_print_mailmerge_price|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row" id="padding-row">
                             <div class='col'>
                                 {{ form.step_NCR_compound_price|as_crispy_field }}
                             </div>
@@ -168,7 +182,7 @@
                                 {{ form.step_white_compound_price|as_crispy_field }}
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" id="perf-row">
                             <div class='col'>
                                 {{ form.step_set_to_perf_price|as_crispy_field }}
                             </div>
@@ -182,7 +196,7 @@
                                 {{ form.step_perf_price|as_crispy_field }}
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" id="numbering-row">
                             <div class='col'>
                                 {{ form.step_set_to_number_price|as_crispy_field }}
                             </div>
@@ -196,7 +210,7 @@
                                 {{ form.step_number_price|as_crispy_field }}
                             </div>  
                         </div>
-                        <div class="row">
+                        <div class="row" id="wrap-row">
                             <div class='col'>
                                 {{ form.step_insert_frontback_cover_price|as_crispy_field }}
                             </div>
@@ -207,7 +221,7 @@
                                 {{ form.step_insert_chip_divider_price|as_crispy_field }}
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" id="drill-row">
                             <div class='col'>
                                 {{ form.step_set_to_drill_price|as_crispy_field }}
                             </div>
@@ -221,7 +235,7 @@
                                 {{ form.step_set_to_drill_price|as_crispy_field }}
                             </div>  
                         </div>
-                        <div class="row">
+                        <div class="row" id="staple-row">
                             <div class='col'>
                                 {{ form.step_set_to_staple_price|as_crispy_field }}
                             </div>
@@ -238,7 +252,7 @@
                                 {{ form.step_staple_price|as_crispy_field }}
                             </div> 
                         </div>
-                        <div class="row">
+                        <div class="row" id="fold-row">
                             <div class='col'>
                                 {{ form.step_set_folder_price|as_crispy_field }}
                             </div>
@@ -252,7 +266,7 @@
                                 {{ form.step_fold_price|as_crispy_field }}
                             </div>   
                         </div>
-                        <div class="row">
+                        <div class="row" id="tab-row">
                             <div class='col'>
                                 {{ form.tabs_price_per_tab|as_crispy_field }}
                             </div>
@@ -266,7 +280,7 @@
                                 {{ form.step_tab_price|as_crispy_field }}
                             </div>  
                         </div>
-                        <div class="col-sm-4">
+                        <div class="row" id="bulkmail-row">
                             <div class='col'>
                                 {{ form.step_bulk_mail_tray_sort_paperwork_price|as_crispy_field }}
                             </div>

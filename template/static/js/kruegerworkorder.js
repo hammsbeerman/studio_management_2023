@@ -1,4 +1,70 @@
 $(document).ready(function(){
+
+    $('#perf-row').hide()
+  
+    $('#show-perf').click(function(){
+    $('#perf-row').slideToggle(200)
+    });
+
+    $('#numbering-row').hide()
+  
+    $('#show-numbering').click(function(){
+    $('#numbering-row').slideToggle(200)
+    });
+
+    $('#wrap-row').hide()
+
+    $('#show-wraparound').click(function(){
+    $('#wrap-row').slideToggle(200)
+    });
+
+    $('#mailmerge-row').hide()
+
+    $('#show-mailmerge').click(function(){
+    $('#mailmerge-row').slideToggle(200)
+    });
+
+    $('#padding-row').hide()
+
+    $('#show-padding').click(function(){
+    $('#padding-row').slideToggle(200)
+    });
+
+    $('#drill-row').hide()
+
+    $('#show-drill').click(function(){
+    $('#drill-row').slideToggle(200)
+    });
+
+    $('#staple-row').hide()
+
+    $('#show-staple').click(function(){
+    $('#staple-row').slideToggle(200)
+    });
+
+    $('#fold-row').hide()
+
+    $('#show-fold').click(function(){
+    $('#fold-row').slideToggle(200)
+    });
+
+    $('#tab-row').hide()
+
+    $('#show-tab').click(function(){
+    $('#tab-row').slideToggle(200)
+    });
+
+    $('#bulkmail-row').hide()
+
+    $('#show-bulkmail').click(function(){
+    $('#bulkmail-row').slideToggle(200)
+    });
+
+
+
+
+
+
     //Autofill qtys on newjob form
     $('#id_set_per_book, #id_pages_per_book, #id_qty_of_sheets, #id_overage, #id_press_size_per_parent, #id_gangup, #id_step_print_cost_side_1, #id_step_print_cost_side_2').change(function(){
       //alert( "Handler for `keyup` called." );
@@ -105,4 +171,3 @@ $(document).ready(function(){
   
   
   });
-  
